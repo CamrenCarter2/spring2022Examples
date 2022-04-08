@@ -16,7 +16,7 @@ public class DbWriter {
 
 			// first connect to the database
 			Connection con = DriverManager.getConnection(
-				"jdbc:mysql://localhost:3306/csc121example",
+				"jdbc:mysql://localhost:3306/classRegistration",
 				"newbie",
 				"testing"
 			);

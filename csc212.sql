@@ -25,8 +25,8 @@ DROP USER IF EXISTS 'newbie'@'localhost';
 CREATE USER 'newbie'@'localhost' IDENTIFIED BY 'testing';
 
 ## give the user full permissions on all tables
-## under the csc121example database (to be created soon)
-GRANT ALL ON csc121example.* TO 'newbie'@'localhost';
+## under the classRegistration database (to be created soon)
+GRANT ALL ON classRegistration.* TO 'newbie'@'localhost';
 
 ## now make those changes effective immediately
 FLUSH TABLES;
@@ -38,15 +38,15 @@ FLUSH PRIVILEGES;
 ##########################################################
 
 ## drop the database if it already exists to prevent errors
-DROP DATABASE IF EXISTS csc121example;
+DROP DATABASE IF EXISTS classRegistration;
 
 ## create the database
-CREATE DATABASE csc121example;
+CREATE DATABASE classRegistration;
 
 ## now that it's created, let's "use" the database as
 ## the current frame of reference under which all the
 ## following commands will be executed.
-USE csc121example;
+USE classRegistration;
 
 ## we will create all the tables first and then populate
 ## them with data so that we can use the LAST_INSERTED_ID()
